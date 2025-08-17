@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/resume-video-agent.git
+    git clone https://github.com/Mikaelnotfound/video-summarizer-agent.git
     cd resume-video-agent
     ```
 

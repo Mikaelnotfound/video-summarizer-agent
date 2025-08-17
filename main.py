@@ -12,7 +12,7 @@ from langchain.tools import tool
 load_dotenv()
 google_api_key = os.getenv("GOOGLE_API_KEY")
 
-llm = ChatGoogleGenerativeAI(google_api_key=google_api_key, model="gemini-1.5-flash")
+llm = ChatGoogleGenerativeAI(google_api_key=google_api_key, model="gemini-2.5-flash")
 
 @tool
 def get_video_content(url: str) -> str:
@@ -70,7 +70,7 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 agent = create_tool_calling_agent(llm, tools, prompt)
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+agent_executor = AgentExecutor(agent=agent, tools=tools)
 
 def is_valid_youtube_url(url):
     """Checks if the URL has a valid YouTube format."""
